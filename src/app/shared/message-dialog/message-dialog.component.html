@@ -1,0 +1,14 @@
+<div class="dialog-wrapper">
+    <div class="dialog-status" [ngClass]="data.status">
+        {{ data.status === 'success' ? '✔ Success' : '✖ Error' }}
+    </div>
+
+    <div class="dialog-message">
+        <h2>{{ data.title }}</h2>
+        <div>{{ data.message }}</div>
+    </div>
+
+    <div class="dialog-actions">
+        <button class="ok-button" (click)="closeDialog()">OK</button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.card-header h4 {
+  margin: 0;
+}
+
+.list-group-item button {
+  font-size: 0.8rem;
+}

@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <!-- Top Logo + Slogan -->
+  <div class="navbar-header">
+    <a class="app-logo" routerLink="/">🛒 Grocery Express</a>
+    <span class="click-icon" (click)="toggleSlogan()" title="Click to toggle slogan">👇</span>
+    <div class="slogan" [@fadeInOut]="showSlogan ? 'visible' : 'hidden'">
+      Your one-step destination for fresh groceries!
+    </div>
+  </div>
+
+  <!-- Nav Links Below -->
+  <div class="navbar-links">
+    <a routerLink="/home">Home</a>
+    <a routerLink="/products">Browse</a>
+    <a *ngIf="userRole === 'USER'" routerLink="/cart">Cart</a>
+    <a *ngIf="userRole === 'ADMIN'" routerLink="/addItem">Manage Items</a>
+    <a *ngIf="!isLoggedIn" routerLink="/signin">Sign In</a>
+    <a *ngIf="!isLoggedIn" routerLink="/register">Register</a>
+    <a *ngIf="isLoggedIn" (click)="logout()">Logout</a>
+  </div>
+</nav>
