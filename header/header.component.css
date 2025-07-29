@@ -1,0 +1,63 @@
+.navbar {
+  background-color: #1f1f1f;
+  color: white;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  padding: 16px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.app-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.click-icon {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.4rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.click-icon:hover {
+  transform: scale(1.2);
+}
+
+.slogan {
+  font-size: 1rem;
+  color: #cfcfcf;
+  margin-top: 8px;
+  transition: opacity 0.5s ease;
+}
+
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.navbar-links a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: transform 0.3s ease, color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #4fc3f7 !important;
+  transform: scale(1.08);
+}

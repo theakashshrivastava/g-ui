@@ -1,0 +1,27 @@
+<div class="container mt-5">
+    <div class="card mx-auto" style="max-width: 650px;">
+        <div class="card-header bg-primary text-white text-center">
+            <h4>User Registration</h4>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+                <div class="mb-3 text-center">
+                    <label class="form-label"><strong>Select Role:</strong></label>
+                    <select class="form-select" formControlName="role">
+                        <option value="">-- Choose Role --</option>
+                        <option value="ADMIN">Admin</option>
+                        <option value="USER">User</option>
+                    </select>
+                </div>
+
+                <input class="form-control mb-2" formControlName="username" placeholder="Username">
+                <input class="form-control mb-2" formControlName="email" type="email" placeholder="Email">
+                <input class="form-control mb-2" formControlName="password" type="password" placeholder="Password">
+
+                <button class="btn btn-success w-100" type="submit" [disabled]="userForm.invalid">
+                    Register
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
